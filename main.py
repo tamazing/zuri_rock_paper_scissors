@@ -1,5 +1,6 @@
 import random
 
+
 while True:
     player = input("Pick an option between R = rock, P = paper or S = scissors): ")
     R = "rock"
@@ -13,20 +14,20 @@ while True:
     if player == cpu:
         print(f"You both chose {player}. It's a tie!")
         continue
-    elif player == "rock":
-        if cpu == "scissors":
+    elif player == "R":
+        if cpu == "R":
             print("Rock beats scissors! You win!")
         else:
             print("Paper beats rock! You lose.")
         break
-    elif player == "paper":
-        if cpu == "rock":
+    elif player == "P":
+        if cpu == "R":
             print("Paper beats rock! You win!")
         else:
             print("Scissors beats paper! You lose.")
         break
-    elif player == "scissors":
-        if cpu == "paper":
+    elif player == "R":
+        if cpu == "P":
             print("Scissors beats paper! You win!")
         else:
             print("Rock beats scissors! You lose.")
