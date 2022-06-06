@@ -35,3 +35,16 @@ while True:
     else:
         print("You picked an invalid option")
         continue
+
+git pull remotename master:dev
+git add --all
+git commit -m "some message"
+git pull remotename master:dev
+git push remotename master:dev
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin **<YOUR URL>**
+git pull --rebase origin master
+git push -f origin master
