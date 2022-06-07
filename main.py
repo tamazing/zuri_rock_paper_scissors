@@ -1,39 +1,45 @@
 import random
 
-
 while True:
-    player = input("Pick an option between R = rock, P = paper or S = scissors): ")
+    print("\n Welcome to the Rock, Paper and Scissors Game! \n")
+    player = input(
+        "Pick an option;  R for rock, P for paper or S for scissors): ")
+    player = player.upper()
     R = "rock"
     P = "paper"
     S = "scissors"
     options = [R, P, S]
-    
-    cpu = random.choice(options)
-    print(f"\nPlayer {player} : CPU {cpu}.\n")
 
-    if player == cpu:
-        print(f"You both chose {player}. It's a tie!")
+    computer = random.choice(options)
+
+    #print(f"\nYou chose {player.upper()} : computer chose {computer[:][0].upper()}.\n")
+    if player == computer:
+        print(f"You both chose the same thing. It's a tie! \n")
         continue
     elif player == "R":
-        if cpu == "R":
-            print("Rock beats scissors! You win!")
+        if computer == "S":
+            print("\n Player R : computer S ")
+            print(" \n Rock smashes scissors! You win! \n")
         else:
-            print("Paper beats rock! You lose.")
+            print("\n Player R : computer P")
+            print(" \n Paper covers rock! You lose. \n")
         break
     elif player == "P":
-        if cpu == "R":
-            print("Paper beats rock! You win!")
+        if computer == "R":
+            print("\n Player P : computer R")
+            print(" \n Paper covers rock! You win! \n")
         else:
-            print("Scissors beats paper! You lose.")
+            print("\n Player P : computer S")
+            print(" \n Scissors cuts paper! You lose. \n")
         break
-    elif player == "R":
-        if cpu == "P":
-            print("Scissors beats paper! You win!")
+    elif player == "S":
+        if computer == "P":
+            print("\n Player S : computer P")
+            print(" \n Scissors cuts paper! You win! \n")
         else:
-            print("Rock beats scissors! You lose.")
+            print("\n Player S : computer R")
+            print(" \n Rock smashes scissors! You lose. \n")
         break
     else:
-        print("You picked an invalid choice")
+        print("You made an invalid choice \n")
         continue
-    
-    
